@@ -1,0 +1,11 @@
+<div class="fav-card">
+  <p class="fav-track-id">{{track.id}}</p>
+  <h1 class="fav-track-title">{{track.title}}</h1>
+  <p>Comments:</p>
+  <button> Remove </button>
+  <button *ngIf="!editFlag" (click)="toggleEdit()"> Edit </button>
+  <button *ngIf="editFlag" (click)="toggleEdit()"> Save </button>
+  <br>
+  <p class="fav-track-comments" *ngIf="!editFlag">{{track.comments}}</p>
+  <textarea *ngIf="editFlag" [(ngModel)]="track.comments"></textarea>
+</div>

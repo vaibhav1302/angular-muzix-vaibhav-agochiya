@@ -1,0 +1,17 @@
+.fav-card {
+    border: 1px gray solid;
+    padding: 15px;
+}
+
+.fav-track-id {
+    font-family: "Verdana", sans-serif;
+}
+
+.fav-track-title {
+    font-style: italic;
+}
+
+.fav-track-comments {
+    border-left: 1px gray solid;
+    padding-left: 5px;
+}
