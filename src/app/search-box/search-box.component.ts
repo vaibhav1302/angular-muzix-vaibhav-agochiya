@@ -11,6 +11,7 @@ export class SearchBoxComponent implements OnInit {
   trackList: Track[]=[];
   trackName: string="";
   response: any;
+  responseList: any;
 
   constructor(private httpService:HttpClient) {
     
@@ -23,7 +24,13 @@ export class SearchBoxComponent implements OnInit {
     this.httpService.get('http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + this.trackName + '&api_key=55a9c042046a453d48d3d2c119131511&format=json')
     .subscribe((response)=>{
       this.response = response;
-      console.log(this.response);
+      this.responseList = this.response.results.trackmatches.track;
+      this.trackList = this.responseList.map(obj=>({
+        id: "",
+        title: obj.name,
+        comments: obj.artist
+      }));
+      console.log(this.responseList);
     });
   }
  

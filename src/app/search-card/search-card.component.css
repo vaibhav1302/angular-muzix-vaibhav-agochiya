@@ -1,0 +1,17 @@
+.search-card {
+    border: 1px gray solid;
+    padding: 15px;
+}
+
+.search-track-id {
+    font-family: "Verdana", sans-serif;
+}
+
+.search-track-title {
+    font-style: italic;
+}
+
+.search-track-comments {
+    border-left: 1px gray solid;
+    padding-left: 5px;
+}

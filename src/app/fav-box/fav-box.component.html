@@ -1,5 +1,6 @@
 <div class="fav-box">
-<p *ngIf="trackList.length == 0" style="padding-left:5rem">No Tracks In Favourites!!</p>
+<button (click)="refreshFav()">Refresh</button>
+<p *ngIf="trackList.length == 0" style="padding-left:5rem;word-wrap: normal">No Tracks In Favourites!!</p>
 <div *ngFor="let favCard of trackList">
     <app-fav-card [track]="favCard"></app-fav-card>    
 </div>

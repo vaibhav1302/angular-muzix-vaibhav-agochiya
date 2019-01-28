@@ -1,2 +1,13 @@
 Song Name: <input type="text" [(ngModel)]="trackName">
-<button (click)="searchByName()">Search</button>
+<button (click)="searchByName()">Search</button><br>
+<div class="search-box" style="word-wrap: normal">
+    <p *ngIf="!response" >
+      Please Refresh!!
+    </p>
+  <div *ngIf="response" >
+      <div *ngFor="let searchCard of trackList">
+          <app-search-card [track]="searchCard"></app-search-card>    
+      </div>
+  </div>
+</div>
+
